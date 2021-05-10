@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts In HTML</title>
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Dancing+Script">
+    <style>
+        /* The fonts in font family are the pre installed fonts in our system, */
+        /* We can import fonts from the Online too, using link tag  */
+
+  
+  .fonts1{
+      font-size: 20px; /* Adjusting the font size*/
+      font-style: italic; /*choosing the font style8*/
+      font-family:serif; /*choosing which type of font you want,Arial,Helvetica,Sans-serif all are font types,if aarial is not there then choose Helvetics if it is not found then choose sans-serif*/ 
+      font-weight: bold; 
+      line-height: 3em; /*line height mean the spacing between the two lines,em is units of line height ,it mean how much we should multiply to orginal font size*/
+      
+  } 
+   
+   /* Note: Here id fonts2 is in div tag which has class fonts ,even if we change the font of paragraph 2 it still same as style in fonts1 */
+   #fonts2
+   {
+       font-family: inherit;
+   }
+    
+    </style>
+</head>
+<body>
+
+    <h1> This is tutorial of fonts in HTML</h1>
+    
+    <div class="fonts1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dolorem sed ex totam maiores similique repellendus impedit, accusamus atque culpa corrupti amet fuga assumenda recusandae possimus qui iusto facere mollitia.</p> 
+        <p id="fonts2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente corporis fugiat dolor, repellendus minima quasi modi tempore quisquam voluptatem odit itaque adipisci, magni saepe! Error architecto dolores nulla qui animi.
+        </p> 
+
+    </div>
+</body>
+</html>

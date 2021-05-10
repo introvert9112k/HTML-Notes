@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text and Box shadow</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .box {
+            border: 2px solid green;
+            background-color: rgb(230, 180, 106);
+            margin: 10px;
+
+        }
+
+        #box1 {
+            box-shadow: 10px 13px green;
+            /* box shadow takes 3 arguments:  xoffset ,yoffset,color:  */
+            /* xoffset : mean thickness of the shadow along the x axis */
+            /* yoffset: mean thickness of the shadow along the y axis */
+            /* color: mean the color of the shadow; */
+            /* Note: the shadow appears only along th ebottom x-axis and right y axis for the positive values */
+            /* shadow apperars along top x -axis and left y-axis for -ve  values  */
+            /* For the box1 int this case as the both the offset values are +ve ,so green shadowe appers along botttom x-axis and right y-axis */
+        }
+
+        #box2 {
+            box-shadow: -8px -13px green;
+            /* Here for ther box2 the shadowe appears along the top x-axis and the left y-axis */
+        }
+
+        #box3 {
+            /* box-shadow also takes other parameters like blurred color and spread color; */
+            box-shadow: 10px 10px 5px green;
+            /* see for the third box the shadow is somewhat blurred,this is due to the parameter blureed color,i.e 5px here   */
+        }
+
+        #box4 {
+            margin: 20px;
+            width: 400px;
+            border: 2px solid green;
+            background-color: lightgoldenrodyellow;
+            box-shadow: 10px 13px 5px 20px green;
+            /* box shadow also takes one more parameter ,which is spread color ,which mean width to which to spread color starting from the border  */
+
+            /* Hence Box shadow takes 5 parameters
+            1.x-offset ---- width of the color in x-axis direction
+            2.y-offset ---- width of the color in y-axis direction
+            3.blur color---- Amount of the color to be blurred
+            4.spread color-----Width to which to spread the color
+            5.color---What should be the shadow color */
+        }
+
+        /* Text shadow is very similar to the box-shadow the only differencw is we add shadow to the text  */
+        /* Text shadow also doesn't have spread color parameter */
+        h1 {
+            text-shadow: 10px 13px 5px green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="box1">
+            <h2>This is box 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aperiam suscipit autem illum iure
+                voluptatum soluta veritatis, amet saepe esse dolore illo? Vitae.</p>
+        </div>
+        <div class="box" id="box2">
+            <h2>This is box 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia molestiae odio nulla sint impedit
+                aperiam incidunt? Quibusdam officiis recusandae odio doloribus, deleniti ipsum porro iusto dolorem quos
+                nulla quo odit voluptates consequuntur corrupti modi.</p>
+        </div>
+        <div class="box" id="box3">
+            <h2>This is box3</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate iure placeat possimus, maxime
+                provident odit id a sapiente animi voluptatum.</p>
+        </div>
+    </div>
+    <div id="box4">
+
+        <h2>Thsi is box4</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis illo error corrupti nesciunt expedita ad
+            id a temporibus ipsa reprehenderit nostrum repudiandae ea ex nulla sunt deserunt, tempora odio vero?</p>
+
+    </div>
+    <P></P> <br>
+    <h1>TEXT SHADOW</h1>
+</body>
+
+</html>

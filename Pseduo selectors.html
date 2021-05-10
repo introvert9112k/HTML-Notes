@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseduo Selectors</title>
+    <style>
+        input[type="text"]
+        {
+            background-color: green;
+            border: 5px solid red;
+            /* targetting only the input whose type is text   */
+            /* this type of selecting is known as pseduo selectors */
+        }
+        form :nth-child(2)
+        {
+             background-color: rosybrown;
+             /* form has four child,they are four inputs.By using nth child we select the respective child of the parent
+             Here parent is form,
+             Note: Any tag written in the form is considered as child,it may be br, span,p,also. */
+        }
+        ul :nth-child(odd)
+        {
+                background-color: sandybrown;
+                /* We are targetting the childs which are at odd positions */
+                /* in ul ,1st and 3rd childs aare odd */
+        }
+        ul :nth-child(even)
+        {
+            background-color: slateblue;
+            /* targetting only the even childs */
+        }
+        .saisri :nth-child(2n+1)
+        {
+            background-color: tomato;
+            /* targetting the childs of the class "saisri"
+            2n+1 mean numbers obtained after replacing n with 0,1,2,3,4,5 ....
+            /* i.e we are targetiing 1,3,5,7,9childs */
+        }
+        .saisri :nth-child(2n)
+        {
+            background-color:yellow;
+            /* targetting the childs of the class "saisri"
+            2n mean numbers obtained after replacing n with 0,1,2,3,4,5 ....
+            /* i.e we are targetiing even childs */
+        }         +
+    </style>
+</head>
+<body>
+    <form action="none.php">
+        <input type="text" placeholder="Enter your Name">
+        <input type="Email" name="" id="" placeholder="Enter your Email">
+        <input type="Password" name="" id="" placeholder="Enter your password">
+        <input type="submit" value="Submit">
+    </form>
+    <ul>
+        <li>1st child</li>
+        <li>2nd child</li>
+        <li>3rd child</li>
+        <li>4th child</li>
+    </ul>
+    <ul class="saisri">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>

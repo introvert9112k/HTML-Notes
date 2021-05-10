@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation Menu</title>
+    <style>
+
+        .navbar
+        {
+            background-color: black;
+            padding: 3px;
+            border-radius: 20px;
+        }
+        .navbar li
+        {
+            float: left; /*floating all the li to left*/
+            list-style: none; /*used to remove bullets or list stylings */
+            /* NOTE : whenever we float we will run ot of parent ,so the background color will not appear,so we must target the navbar ul and write the property overflow to value auto */
+            text-decoration: none; /*to remove the underkine ndeer the hyperlink*/
+            padding-right: 40px;
+        }
+        .navbar ul
+        {
+            overflow: auto;
+        }
+        .navbar a
+        {
+            text-decoration: none; /*to remove the underkine ndeer the hyperlink*/
+            color: white;
+        }
+        .navbar a:hover
+        {
+            color: blue;
+            /* background-color: white; */
+        }
+        .search input
+        {
+            float:right;
+            border: 5px solid rgb(71, 23, 182);
+            border-radius: 50px;
+            width: 200px;
+            
+        }
+        .search
+        {
+         float: right;   
+        padding-right: 100px;
+         color: white;
+        } 
+         #searchid
+        {
+          padding-right: 20px;
+         
+        }
+       span:hover
+        {
+            color: blue;
+            /* background-color: orange; */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Education</a></li>
+                <li><a href="">Skills</a></li>
+                <li><a href="">Projects</a></li>
+                <li><a href="">Contact me</a></li> 
+
+                <div class="search">
+                  <span id="searchid"> Search </span> <input type="text" >
+                   
+                     
+                </div>
+            </ul>
+        </nav>
+    </header>
+  
+</body>
+
+</html>

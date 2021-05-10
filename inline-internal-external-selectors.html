@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline-Internal-External description</title>
+
+    <!-- Internal suppporting style tag  -->
+    <style>
+         
+         /* ID SELECTOR  */
+
+        #internal{
+            color: green;
+            background-color: white;
+        }
+
+   /* here we added internal green color and background color to orange for paragraph with id common */
+        #common{
+
+            color: green;
+            background-color: orange;
+        } 
+
+           /* ELEMENT SELECTOR  */
+        div{
+            color: orchid;
+             background-color: rgb(83, 172, 83); /*!important*/   /*if we write here important then internal will be applied */
+        } 
+
+        /* GROUPPING SELECTOR  */
+       span,ul 
+       {
+             color: red ;
+             background-color: plum;
+       } 
+
+       /* class selector  */
+
+       .classselector 
+       {
+           color : violet;
+           background-color: white;
+       }
+    </style> 
+
+    <!-- External linking -->
+<link rel="stylesheet" href="external.css">
+
+</head>
+<body>
+     <!-- example of inline,here we are giving the style in the tag itself -->
+    <p style="color: blue; background-color: black">This is inline paragraph</p>  
+     
+    <!-- this is internal example,In internal we write the css in style tag,which is in head tag -->
+    <p id="internal">This is internal Paragraph</p>
+   
+     <!-- example of external, we use link tag to get the external CSS file into markup,link tag is used in head -->
+    <p id="external">This is external paragraph</p>
+
+    <!-- suppose if we add internal,inline,external to same tag then inline is dominating -->
+     
+
+    <!-- here we added inline,color tomato and background-color to violet  -->
+    <p id="commmon" style="color: tomato; background-color: violet;">We applied inline,internal,external to this paragraph,but we will get CSS of only inline,as inline dominating over others add on </p>
+   <!-- You can see that for 4th paragraph color is tomato and background-color is violet rather than colors given in internal and External   -->
+
+
+   <!-- IF EXTERNAL AND Internal are applied on the tag then the one which written at last will be applied
+   both the internal and external are written in style tag itself, 
+   if internal is written  first then external then external will be applied  
+   if external is written  first then internal then internal will be applied  
+   that mean the type of addition which is writeen at last willbe applied , the first written one will be overwritten by second addon -->
+
+   <div>
+       On this div tag both internal and external are applied,but external is last applied so external is valid
+   </div>
+   
+    <!-- if we wish to not over write the applied one we can write !important in internal or external one  --> 
+
+    <!-- SELECTORS  -->
+
+    <!-- there are 4 types of SELECTORS
+    elemnt SELECTOR
+    id SELECTOR
+    class selector 
+    groupping selector  -->
+
+    <span> Example of groupping selector</span>
+    <ul>
+        <li>1st ele</li>
+        <li>2nd ele</li>
+        <li>3rd ele</li>
+    </ul>
+    <div class="classselector">
+        this is example of class selector
+    </div>
+</body>
+</html>

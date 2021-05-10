@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Selectors</title>
+    <style>
+        div p {
+            background-color: green;
+            /* this makes the background color of the paragraphs whose parent is the div */
+        }
+
+        div ul li {
+            background-color: orange;
+            /* div ul li mean li in the ul which is in the div */
+        }
+
+        div ul li a {
+            background-color: palegreen;
+        }
+
+        div>p {
+            background-color: peachpuff;
+            /* div > p mean the paragraph which are directly under the div,that mean those paragraphs whose parent is div */
+            /* see the paragraph inside ul is not colored,because it is not the direct child of div  */
+        }
+
+        div+p {
+            background-color: rgb(0, 0, 0);
+            /* this changes the background forsuch paragraphs whose first sibling is the div */
+            /* consider the first div,there are 2 child for this parent div,they are second div,p
+           now theya are siblings to each other,div+p mean those para whose precedding sibling is div
+        first para haas the preceeding sibling div ,i,e second div,hence it changes the baackground of first para */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div>
+            <p>This paragraph is under second div</p>
+            <ul>
+                <p>This paragraph is in ul</p>
+                <li>this paragraph under second div,ul in li</li>
+                <li><a href="#">This link is under second div ul li a </a></li>
+
+            </ul>
+
+        </div>
+        <p>This paragraph is under 1st div</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .container {
+            background-color: burlywood;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+        #box {
+            background-color: chocolate;
+            width: 200px;
+            height: 100px;
+            animation-name: saisri;
+            animation-duration: 1s;
+            animation-timing-function: ease-in;
+            animation-iteration-count: 3;
+            animation-fill-mode: forwards;
+            /* short hand notation */
+            /* animation: animation name animation-duration animation-timing-funcvtion animation-iteration-count animation-delay animation-fill-mode; */
+
+        }
+
+        #box1 {
+            margin-top: 30px;
+            border: 2px solid green;
+            background-color: chocolate;
+            width: 400px;
+            height: 100px;
+            animation-name: saisri1;
+            animation-duration: 45s;
+            animation-timing-function: ease-in;
+            /* animation-iteration-count: infinite; */
+
+        }
+
+        @keyframes saisri {
+            from {
+                width: 200px;
+            }
+
+            to {
+                width: 900px;
+            }
+        }
+
+        @keyframes saisri1 {
+            0% {
+                
+               background-image:url('/images/bike.jpg') 
+            }
+
+            25% {
+               background-image:url('/images/nature.jpg')
+                
+            }
+
+            50% {
+               background-image:url('/images/nature2.jpg') 
+            }
+
+            75% {
+                background-image:url('/images/pubg2.jpg')
+            }
+
+            100% {
+                background-image:url('/images/nature.jpg')
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div id="box">
+            this is my Animation1
+        </div>
+        <div id="box1">
+            THis is my Animation2
+        </div>
+    </div>
+</body>
+
+</html>

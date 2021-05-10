@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and After Pseduo selectors</title>
+    <style>
+        .container {
+            border: 2px solid red;
+            background-color: green;
+            display: flex;
+            padding: 20px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1::before {
+            content: "This text is added before heading using the before pseduo selector";
+            font-size: 10px;
+
+        }
+
+        h1::after {
+            content: "this contenti s added after the heading using the after tag";
+            font-size: 10px
+        }
+
+        /* NOTE  */
+        /* before after elements do not have any height and width properties they have only padding and margin properties */
+        
+        /* suppose the element is block element then contetn in beforre will come on the previous block of the current one,incase of after content will  come after the block element  */
+
+        /* if the element is inline element then content will come defore and after the element in the same  line itself */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>Home</div>
+        <div>About uS</div>
+        <div>Service</div>
+        <div>Contact
+        </div>
+        <h1>Welcome to the Coding flatform</h1>
+    </div>
+</body>
+
+</html>

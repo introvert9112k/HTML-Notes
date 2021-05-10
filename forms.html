@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms in HTml</title>
+  </head>
+  <body>
+    <!-- we can create forms in html like google forms -->
+    <!-- hence we know that we would submit the form,so ther should be backened,we link the backened file with html,the file written in action is backenend file -->
+    <form action="backened.php">
+      <!-- INPUT  -->
+      <!-- INPUT TAG IS USED TO TAKE the user input from the client, we can get different types of input ,ranging from emails,checkboxes,radioboxes etc  -->
+      <strong>GOOGLE FORMS</strong>
+      <!-- division tag is used to divide the code,it works sam like the break tag  -->
+      <div>First Name : <input type="text" name="myfirstname" id="" /></div>
+      <br />
+      <!--let's add break tag to give more space-->
+      <div>
+        Last Name : <input type="text" name="mylastname" id="" />
+        <!--this will create a box in which we can enter the text,because the type is text here-->
+        <!-- note here the name attribute desxcribes variable with which the data stores in backened,in first division  name is myfirstname,so the whatever the input we give for the first name will store in the variable myfirstname,similarly what we give for last name will store in variable mylastname  -->
+      </div>
+      <br />
+      <div>
+        Email Address : <input type="email" name="myemail" id="" />
+        <!-- here the box will create,it takes the only email  -->
+      </div>
+      <br />
+      <div>
+        Roll No : <input type="number" name="myrolllno" id="" />
+        <!-- here input type is number we can give only numbers in the box,it doesn't takes the alphbets except the letter "e' because e is used to denote 10 power -->
+        <!-- exa: 2e2 mean 2*10 square   -->
+      </div>
+      <br />
+      <div>Date of Birth : <input type="date" name="dob" id="" /></div>
+      <br />
+      <div>
+        <b>what skills do you have</b> <br />
+        Python <input type="checkbox" name="pythonskill" id="" /><br />
+        C++ <input type="checkbox" name="c++skil" id="" /><br />
+        C <input type="checkbox" name="cskill" id="" /><br />
+        java <input type="checkbox" value="javaskill" /><br />
+        javascript <input type="checkbox" name="jsskill" id="" />
+        <!-- here we are creating the checkbox  -->
+      </div>
+      <br />
+      <div>
+        <!-- note in the above createed checkboxes we can select multiple checkboxes,There will be situatuion where we can select only one option like gender etc, -->
+        <!-- we can create them to in html  -->
+        <!-- radio type is used to do that -->
+        <b>Gender </b> <br />
+        Male <input type="radio" name="commonvariable" id="" /><br />
+        Female <input type="radio" name="commonvariable" id="" /><br />
+        Other <input type="radio" name="commonvariable" id="" />
+        <!-- notethat the here name is same for all the Male,Female,Other,i.e commonvariable  -->
+      </div>
+      <br />
+      <div>
+        <b>Can you describe the projects that have you done</b><br />
+        <textarea
+          name="projectdescription"
+          id=""
+          cols="50"
+          rows="10"
+        ></textarea>
+        <!-- textarea is used to written the text  -->
+        <!-- we can change the shape of the textbox by adjusting the cols and rows  -->
+      </div>
+      <br />
+      <div>
+        <b>please upload the your best project file here</b> <br />
+        <input type="file" name="projecturl" id="" />
+      </div>
+      <br />
+      <div>
+        <input type="submit" value="submit" />
+        <input type="reset" value="reset" />
+        <!-- submit type is used to submit the form,it is submit button,value mean the text what we want to be in the button,it can be anyother text rather than submit also -->
+        <!-- reset type is used to reset all the information we written  -->
+      </div>
+    </form>
+  </body>
+</html>

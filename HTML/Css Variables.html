@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Variables
+    </title>
+    <style>
+        :root {
+            --global-color: green;
+            /* It is a global variable ,which can be acessed everywhere */
+        }
+
+        .box {
+            /* variables are derfined using the syntax "--variable_name:value" ,they can be accesed by using syntax var(--vriable name) */
+            --box-color: violet;
+            /*declaring variable,here ourt variable name is box-color and value is violet*/
+            /* /*Now we try to change the background color of th eboxes to the variable value */
+            border: 2px solid green;
+            background-color: burlywood;
+            /*intially background color is blurrywood,later we overwrite it with the variable color*/
+            height: 100px;
+            width: 100px;
+            list-style: none;
+            margin: 20px;
+            background-color: var(--box-color);
+            /* /*here we aceesing the variable using the syntax var(--variable-name) */
+
+
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            /*aligns contemnts equal heights from top and botom*/
+            justify-content: center;
+            /*Align contents equal space from left and right*/
+            background-color: var(--box-color);
+            /*Here the background color doesn't changes because ,like in other prograaming languages ,variables have global and local values,
+         here box-color has scope upto the box only we cannnot,bring it to the other */
+            /* If we want to acesss thje variable everywhere,we should define it globally,this can be done by using the root keyword */
+            background-color: var(--global-color);
+            /* Now we can see that the background color changed */
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>

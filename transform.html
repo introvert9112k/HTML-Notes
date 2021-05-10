@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: burlywood;
+
+        }
+
+        .box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+            width: 250px;
+            border: 2px solid green;
+            margin: 10px;
+            background-color: coral;
+            transition: all 0.1s ease-in;
+        }
+
+        #box1:hover {
+            transform: rotate(45deg);
+        }
+
+        #box2:hover {
+            transform: skew(45deg);
+        }
+
+        #box3:hover {
+            transform: scale(2);
+        }
+
+        #box4:hover {
+            transform: translateX(30px);
+        }
+
+        #box5:hover {
+            transform: translateY(45px);
+        }
+
+        #box6:hover {
+            transform: translate(123px, 123px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="box1">rotate by 45 degree</div>
+        <div class="box" id="box2">skew by 45 degree</div>
+        <div class="box" id="box3">scale to 2 times</div>
+        <div class="box" id="box4">translate in x direction by 30px</div>
+        <div class="box" id="box5">Translate in ny direction by 45px</div>
+        <div class="box" id="box6">Translate in both x and y direction</div>
+
+    </div>
+</body>
+
+</html>

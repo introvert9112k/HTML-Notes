@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>borders Background in HTMl</title>
+    <style>
+        #saisri {
+            border-color: black;
+            /*Applying the border color*/
+            border-radius: 40px;
+            /*Appllying border radius at all corners*/
+            border-width: 5px;
+            /*Adjsting the width for whole border*/
+            border-style: solid;
+            /*Border type whether it is dotted or bold etc */
+            border: 4px solid green;
+            /*we can write border width,style,color in one line as we written,note that it has overwriten
+         before written one */
+        }
+
+        #yamuna {
+            background-color: violet;
+            margin: 10px;
+            /*to give gap betwen the paragraphs,we willl learmn it in box model */
+            border-top: 4px green dotted;
+            /* setting top of border to greeen color,of dotted type having width of 4px */
+            border-bottom: 4px orange solid;
+            /* setting bottom of border to orange color,of solid type having width of 4px */
+            border-right: 5px yellow dotted;
+            /* setting top of border to yellow color,of dotted type having width of 5px */
+            border-left: 5px solid red;
+            /* setting top of border to red color,of solid type having width of 5px */
+            border-top-left-radius: 400px;   /* Setting border-top-left-radius to 400px*/
+            border-top-right-radius: 400px; /* Setting border-top-right-radius to 40px*/
+            border-bottom-left-radius: 300px; /* Setting border-botom-left-radius to 30px*/
+            border-bottom-right-radius: 300px; /* Setting border-botom-right-radius to 30px*/
+        }
+
+        #anuradha {
+            background-color: black;
+            font-style: italic;
+            font-family: serif;
+            color: coral;
+            /* height: 100px;
+        /*how much height we want */
+            /* width: 1000px; */
+            /* how much width we should want */
+            */
+        } 
+
+        #background
+        {
+            margin: 40px;
+            border: 3px solid black;
+            background-image : url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqrHKUdHj2L1H6JVdylkP5bUdOBFATk1lQHA&usqp=CAU);
+            /* Image is filled inside the border  */
+            /* Note: the image is repeating
+             */
+             height: 400px;
+             width: 500px;
+             /* if we want to repeat image only in x or y direction we use background-repeat function  */
+             background-repeat: repeat-x; /* Image repeats only in x DIrection*/
+             background-repeat: repeat-y; /* Image repeats only in y DIrection*/             
+             background-repeat: no-repeat; /* Image doesn't repeat*/             
+            /* assinging th eposition of the image  */
+            background-position: center; /*placing image at center*/
+            background-position: 23px 40px ;/*placing image at our desired position*/
+            /*this is shorthand notation for background-position-x and background-position-y */
+            background-position: center top; /*placing image at center top*/
+            background-position: center bottom; /*placing image at center bottom*/
+             background-position: center right; /*placing image at center right*/
+             background-position: center left; /*placing image at center left*/
+             background-position: center center; /*placing image at center of x and y ,it is same as center*/
+            } 
+    </style>
+</head>
+
+<body>
+    <div id="saisri">
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis
+            asperiores dolor, nesciunt eveniet labore repellat expedita? Culpa
+            accusantium architecto corporis, harum alias dicta aliquam excepturi,
+            labore beatae incidunt error molestias?
+        </p>
+    </div>
+    <div id="yamuna">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+            cupiditate natus optio quasi ratione consequatur quam veritatis
+            recusandae unde! Ex at odit doloribus, odio quis earum aperiam
+            consectetur quae obcaecati illo inventore voluptates, maiores facilis
+            quam dolore! Id, sed vero.
+        </p>
+    </div>
+    <div id="anuradha">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsam
+            nemo alias, quis maiores possimus nisi debitis nobis vero reiciendis
+            aliquid ab doloremque delectus. Eum totam nulla dolorem, iusto ratione,
+            dolor, atque facere delectus ipsa nisi eveniet nam expedita possimus.
+        </p>
+    </div>
+ 
+
+    <div id="background">
+        <p>This is saisri</p>
+    </div>
+
+</body>
+
+</html>
